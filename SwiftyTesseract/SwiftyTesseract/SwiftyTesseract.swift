@@ -134,7 +134,6 @@ public class SwiftyTesseract {
     self.init(languages: [language], dataSource: dataSource, engineMode: engineMode)
   }
 
-  @available(*, deprecated, message: "migrate to init(language:dataSource:engineMode:)")
   public convenience init(
     language: RecognitionLanguage,
     bundle: Bundle = .main,
@@ -143,7 +142,6 @@ public class SwiftyTesseract {
     self.init(language: language, dataSource: bundle, engineMode: engineMode)
   }
 
-  @available(*, deprecated, message: "migrate to init(languages:dataSource:engineMode:)")
   public convenience init(
     languages: [RecognitionLanguage],
     bundle: Bundle = .main,
@@ -176,7 +174,6 @@ extension SwiftyTesseract {
   ///   - image: The image to perform recognition on
   ///   - completionHandler: The action to be performed on the recognized string
   ///
-  @available(*, deprecated, message: "use performOCR(on:) or performOCRPublisher(on:)")
   public func performOCR(on image: UIImage, completionHandler: (String?) -> ()) {
     switch performOCR(on: image) {
     case let .success(string): completionHandler(string)
