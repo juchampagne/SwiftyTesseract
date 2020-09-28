@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.version                  = "3.1.3"
   s.summary                  = "A Swift wrapper around Tesseract for use in iOS applications."
 
-  s.swift_versions           = "5.2"
+  s.swift_versions           = "5.3"
 
   s.description              = <<-DESC
                                 SwiftyTesseract is a library used to perform optical character recognition
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_library     = "SwiftyTesseract/SwiftyTesseract/dependencies/lib/*.a"
   s.pod_target_xcconfig      = {  "SWIFT_INCLUDE_PATHS" => "$(SRCROOT)/SwiftyTesseract/SwiftyTesseract/SwiftyTesseract/dependencies/include/tesseract/**",
                                   "OTHER_LDFLAGS" => "-lstdc++ -lz",
-                                  "SWIFT_VERSION" => "5.2",
+                                  "SWIFT_VERSION" => "5.3",
                                   "CLANG_CXX_LIBRARY" => "compiler-default" }
 
   s.preserve_paths           = "SwiftyTesseract/SwiftyTesseract/dependencies/include/tesseract/module.modulemap"
