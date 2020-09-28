@@ -25,20 +25,20 @@ Pod::Spec.new do |s|
   s.platform                 = :ios, "13.0"
 
   s.source                   = { :git => "https://github.com/juchampagne/SwiftyTesseract.git", :branch => "master" }
-  s.source_files             = "juchampagne/SwiftyTesseract/*.swift","juchampagne/SwiftyTesseract/**/*.{h,swift}"
-  s.private_header_files     = "juchampagne/SwiftyTesseract/dependencies/include/**/*.h"
+  s.source_files             = "SwiftyTesseract/SwiftyTesseract/*.swift","juchampagne/SwiftyTesseract/**/*.{h,swift}"
+  s.private_header_files     = "SwiftyTesseract/SwiftyTesseract/dependencies/include/**/*.h"
 
   s.requires_arc             = true
 
   s.frameworks               = "UIKit"
 
   s.ios.deployment_target    = "11.0"
-  s.ios.vendored_library     = "juchampagne/SwiftyTesseract/dependencies/lib/*.a"
-  s.pod_target_xcconfig      = {  "SWIFT_INCLUDE_PATHS" => "$(SRCROOT)/SwiftyTesseract/juchampagne/SwiftyTesseract/dependencies/include/tesseract/**",
+  s.ios.vendored_library     = "SwiftyTesseract/SwiftyTesseract/dependencies/lib/*.a"
+  s.pod_target_xcconfig      = {  "SWIFT_INCLUDE_PATHS" => "$(SRCROOT)/SwiftyTesseract/SwiftyTesseract/SwiftyTesseract/dependencies/include/tesseract/**",
                                   "OTHER_LDFLAGS" => "-lstdc++ -lz",
                                   "SWIFT_VERSION" => "5.2",
                                   "CLANG_CXX_LIBRARY" => "compiler-default" }
 
-  s.preserve_paths           = "juchampagne/SwiftyTesseract/dependencies/include/tesseract/module.modulemap"
+  s.preserve_paths           = "SwiftyTesseract/SwiftyTesseract/dependencies/include/tesseract/module.modulemap"
 
 end
