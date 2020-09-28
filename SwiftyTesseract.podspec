@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform                 = :ios, "13.0"
 
-  s.source                   = { :git => "https://github.com/juchampagne/SwiftyTesseract.git", :tag => "#{s.version}" }
+  s.source                   = { :git => "https://github.com/juchampagne/SwiftyTesseract.git", :branch => "master" }
   s.source_files             = "juchampagne/SwiftyTesseract/*.swift","juchampagne/SwiftyTesseract/**/*.{h,swift}"
   s.private_header_files     = "juchampagne/SwiftyTesseract/dependencies/include/**/*.h"
 
