@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target    = "11.0"
   s.ios.vendored_library     = "juchampagne/SwiftyTesseract/dependencies/lib/*.a"
-  s.pod_target_xcconfig      = {  "SWIFT_INCLUDE_PATHS" => "$(SRCROOT)/juchampagne/SwiftyTesseract/SwiftyTesseract/dependencies/include/tesseract/**",
+  s.pod_target_xcconfig      = {  "SWIFT_INCLUDE_PATHS" => "$(SRCROOT)/SwiftyTesseract/juchampagne/SwiftyTesseract/dependencies/include/tesseract/**",
                                   "OTHER_LDFLAGS" => "-lstdc++ -lz",
                                   "SWIFT_VERSION" => "5.2",
                                   "CLANG_CXX_LIBRARY" => "compiler-default" }
